@@ -24,7 +24,7 @@ class PollController extends Controller
      */
     public function create()
     {
-        //
+        return view('create.poll');
     }
 
     /**
@@ -46,7 +46,7 @@ class PollController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('show.poll', ['poll' => Poll::findOrFail($id), 'id' => $id]);
     }
 
     /**
