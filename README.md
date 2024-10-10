@@ -24,20 +24,32 @@ voto (realtime)
 Requisitos: Docker
 
 1. Clone o repositório em sua maquina </br>
-  ```git clone https://github.com/KuiK-San/PS-SignoTech```
-2. Faça um novo .env</br>
-  ``cp .env.example .env``
-3. Entre no repositório do copie o .env do laradock e configure se necessário </br>
-  ``cd laradock
-  cp .env.example .env``
+  ```
+git clone https://github.com/KuiK-San/PS-SignoTech
+```
+3. Faça um novo .env</br>
+```
+cp .env.example .env
+```
+4. Entre no repositório do copie o .env do laradock e configure se necessário </br>
+```
+cd laradock
+cp .env.example .env
+```
 5. Execute os containers docker dentro do laradock</br>
-  ``docker-compose up -d nginx mysql``
-6. Identifique qual o container workspace e entre no terminal</br>
- ``docker ps
-  docker exec -it {{ docker container laradock_workspace id }} bash``
+```
+docker-compose up -d nginx mysql
+```
+7. Identifique qual o container workspace e entre no terminal</br>
+```
+docker ps
+docker exec -it {{ docker container laradock_workspace id }} bash
+```
 8. Instale o composer e rode as migrations </br>
-  ``composer install
-   php artisan key:generate
-   php artisan migrate``
+  ```
+composer install
+php artisan key:generate
+php artisan migrate
+```
 10. Acesse o projeto em localhost :)
  
