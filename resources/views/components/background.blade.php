@@ -24,6 +24,7 @@
     
     <div class="container {{ $active == 'welcome' ? 'd-flex justify-content-center welcome' : '' }}">{{ $content }}</div>
     
+    <script src="https://kit.fontawesome.com/61b248fb6c.js" crossorigin="anonymous"></script>
     
 </body>
 </html>

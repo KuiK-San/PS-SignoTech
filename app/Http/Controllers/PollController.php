@@ -14,7 +14,7 @@ class PollController extends Controller
      */
     public function index()
     {
-        return view('poll', ['poll'=>Poll::all()]);
+        return view('poll', ['polls'=>Poll::all()]);
     }
 
     /**
