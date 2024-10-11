@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->text('descricao');
-            $table->timestamp('inital_date')->nullable();
-            $table->timestamp('final_date')->nullable();
+            $table->date('inital_date')->nullable();
+            $table->date('final_date')->nullable();
             $table->string('poll_owner');
             $table->json('options');
             $table->timestamps();

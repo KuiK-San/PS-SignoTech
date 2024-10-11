@@ -27,8 +27,8 @@
                 <div class="form-row col-12">
 
                     <div class="form-group col-12 col-sm-6 ">
-                        <label for="intial_date">Data Inical</label>
-                        <input type="date" class="form-control" id="intial_date" name="intial_date" placeholder="Seu nome aqui">
+                        <label for="initial_date">Data Inical</label>
+                        <input type="date" class="form-control" id="initial_date" name="intial_date" placeholder="Seu nome aqui">
                     </div>
                     <div class="form-group col-12 col-sm-6">
                         <label for="final_date">Data Final</label>

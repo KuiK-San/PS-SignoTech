@@ -35,7 +35,20 @@ class PollController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $Poll = new Poll;
+
+        
+        $Poll->titulo = $request->titulo;
+        $Poll->poll_owner = $request->usuario;
+        $Poll->descricao = $request->descricao  ;
+        $Poll->inital_date = $request->intial_date;
+        $Poll->final_date = $request->final_date;
+        $Poll->options = $request->json;
+
+        $Poll->save();
+
+        return redirect('/poll');
+
     }
 
     /**
