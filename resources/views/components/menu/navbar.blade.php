@@ -5,7 +5,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
     <div class="container">
         <a class="navbar-brand d-flex flex-nowrap" href="#">
-            <img src="./SignoTech.webp"  height="30" alt="">
+            <img src="{{ asset('images/SignoTech.webp') }}"  height="30" alt="">
             <!-- <span class="mx-2">PS-GuilhermeCasagrande</span> -->
         </a>
         <span>

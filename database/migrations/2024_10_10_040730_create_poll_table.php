@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('polls', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
+            $table->text('descricao');
             $table->timestamp('inital_date')->nullable();
             $table->timestamp('final_date')->nullable();
             $table->string('poll_owner');
