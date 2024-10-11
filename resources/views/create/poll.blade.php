@@ -24,8 +24,9 @@
                 </div>
 
 
+                <p class="text-danger container d-none" id="alertDate">Adicione um Período Valido</p>
                 <div class="form-row col-12">
-
+                    
                     <div class="form-group col-12 col-sm-6 ">
                         <label for="initial_date">Data Inical</label>
                         <input type="date" class="form-control" id="initial_date" name="intial_date" placeholder="Seu nome aqui">
@@ -50,7 +51,7 @@
                 
                 <div class="form-group col-12">
                     <label for="opcoes">Opções Adicionadas</label>
-                    <p class="text-danger d-none" id="alert">Adicione pelo menos 3 opções!</p>
+                    <p class="text-danger d-none" id="alertOptions">Adicione pelo menos 3 opções!</p>
                     <select multiple class="form-control" name="opcoes" id="opcoes">
                         
                     </select>
