@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('inital_date')->nullable();
             $table->date('final_date')->nullable();
             $table->string('poll_owner');
-            $table->json('options');
+            $table->binary('options');
             $table->timestamps();
         });
     }

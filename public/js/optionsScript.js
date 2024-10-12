@@ -17,6 +17,7 @@ btnAddOption.addEventListener('click', (event) => {
 
     newOption.value = optionInput.value;
     newOption.text = optionInput.value;
+    newOption.dataset.votes = '0';
 
     select.appendChild(newOption);
 })

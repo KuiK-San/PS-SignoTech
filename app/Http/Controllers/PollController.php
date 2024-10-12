@@ -70,7 +70,7 @@ class PollController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('create.poll', ['poll' => Poll::findOrFail($id), 'id' => $id]);
     }
 
     /**
@@ -82,7 +82,22 @@ class PollController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd($request);
+
+        $Poll = Poll::find($id);
+
+        if(isset($request->vote)){
+            return redirect("/poll/" . $id);
+        }
+
+        $Poll->titulo = $request->titulo;
+        $Poll->poll_owner = $request->usuario;
+        $Poll->descricao = $request->descricao  ;
+        $Poll->inital_date = $request->intial_date;
+        $Poll->final_date = $request->final_date;
+        $Poll->options = $request->json;
+
+        $Poll->save();
     }
 
     /**
@@ -93,6 +108,8 @@ class PollController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = Poll::where('id', $id)->delete();
+
+        return redirect('/poll');
     }
 }
