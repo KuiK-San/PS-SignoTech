@@ -82,7 +82,6 @@ class PollController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request);
 
         $Poll = Poll::find($id);
 
@@ -98,6 +97,9 @@ class PollController extends Controller
         $Poll->options = $request->json;
 
         $Poll->save();
+
+        return redirect('/poll');
+
     }
 
     /**
