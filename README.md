@@ -25,7 +25,7 @@ Requisitos: Docker
 
 1. Clone o repositório em sua maquina </br>
   ```
-git clone --recurse-submodules --remote-submodules https://github.com/KuiK-San/PS-SignoTech
+git clone --recurse-submodules --remote-submodules git@github.com:KuiK-San/PS-SignoTech.git
 ```
 3. Faça um novo .env</br>
 ```
