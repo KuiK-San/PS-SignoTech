@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::resource('/poll', PollController::class);
+Route::post('/poll/{poll}/vote', [PollController::class, 'vote']);
