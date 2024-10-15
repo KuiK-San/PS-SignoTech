@@ -32,5 +32,4 @@ const refreshVotes = (id) => {
     });
 }
 
-setInterval(refreshVotes, 30, 5);
 
