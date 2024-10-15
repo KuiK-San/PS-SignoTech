@@ -66,8 +66,8 @@
 
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Salvar Enquete</button>
-                    <button type="button" class="btn btn-primary text-bg-danger p-2 border-0" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-id="{{ route('poll.destroy', $poll->id) }}" data-bs-name="{{ $poll->nome }}">
-                        a enquete
+                    <button type="button" class="btn btn-danger text-bg-danger p-2 border-0" data-toggle="modal" data-target="#deleteModal">
+                        Excluir a Enquete
                     </button>
                 </div>
                 
@@ -85,11 +85,11 @@
                         <button   button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p id="text">Tem certeza que deseja excluir a Enquete </p>
+                        <p id="text">Tem certeza que deseja excluir a enquete </p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary text-bg-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <form id="delete" action="" method="post">
+                        <form id="delete" action="/poll/{{ $poll->id }}" method="post">
                             @csrf
                             {{ method_field('DELETE') }} 
                             <button type="submit" id=""  class="btn btn-primary text-bg-primary">Deletar</button>
@@ -104,26 +104,6 @@
         <script src="{{ asset('js/optionsScript.js') }}"></script>
         <script src="{{ asset('js/verificatorEdit.js') }}"></script>
         <script src="{{ asset('js/optionsAdding.js') }}"></script>
-
-        <!-- SCRIPT DELETE -->
-        <script>
-            let deleteModal = document.getElementById('deleteModal')
-            console.log(deleteModal)
-            if (deleteModal) {
-                deleteModal.addEventListener('show.bs.modal', event => {
-                    console.log('123')
-                    let botao = event.relatedTarget
-                    let id = botao.getAttribute('data-bs-id')
-                    let name = botao.getAttribute('data-bs-name')
-
-                    document.querySelector('#text').innerHTML = `Tem certeza que deseja excluir a marca ${name}`
-                    let deletar = document.querySelector('#delete')
-                    
-                    deletar.setAttribute('action', id)
-
-                })
-            }
-        </script>
         
         
     </x-slot:content>
