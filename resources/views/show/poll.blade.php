@@ -42,6 +42,7 @@
             <x-bs-script/>
             <script src="{{ asset('js/optionsVoting.js') }}"></script>
             <script src="{{ asset('js/viewVotes.js') }}"></script>
+            <script src="{{ asset('js/votesRefresh.js') }}"></script>
         </div>
         
         

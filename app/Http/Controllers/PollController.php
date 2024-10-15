@@ -130,4 +130,12 @@ class PollController extends Controller
         return redirect('/poll/' . $id);
 
     }
+
+    public function getVotes($id)
+    {
+        $data = json_decode(Poll::find($id)->options);
+
+
+        return response()->json($data);
+    }
 }
